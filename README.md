@@ -65,13 +65,10 @@ LIMIT 8;
 📌 Query Analysis Before Indexing
 
 Graphical: 
-    ![Graphical Execution Plan](Screenshots/Graphical_AFTER_INDEX.png)
-
-
-
+    	![Graphical Execution Plan](Screenshots/Graphical_AFTER_INDEX.png)
     
-    Analysis:
-    ![](<Screenshots/Analyse - BEFORE INDEX.png>)
+Analysis:
+    	![](Screenshots/Analyse_BEFORE_INDEX.png)
 
 📌 Explain Analyze Output:
 
@@ -87,9 +84,9 @@ Graphical:
     ORDER BY stream DESC
     LIMIT 8;
 
-    - Select this query and Execute it:
+- Select this query and Execute it:
 
-    ![](<Screenshots/Explain Analyse - BEFORE INDEX.png>)
+	![](Screenshots/ExplainAnalyse_BEFORE_INDEX.png)
 
 
 * Creating an Index for Optimization
@@ -100,11 +97,11 @@ Graphical:
 
 📌 Query Analysis After Indexing
 
-    Graphical:   
-        ![](<Screenshots/Graphical - AFTER INDEX.png>)
+Graphical:   
+	![](Screenshots/Graphical_AFTER_INDEX.png)
 
-    Analysis:
-        ![](<Screenshots/Analyse - AFTER INDEX.png>)
+Analysis:
+        ![](Screenshots/Analyse_AFTER_INDEX.png)
 
 
 📌 Explain Analyze Output:
@@ -121,9 +118,9 @@ Graphical:
     ORDER BY stream DESC
     LIMIT 8;
 
-    - Select this query and Execute it:
+- Select this query and Execute it:
 
-    ![](<Screenshots/Explain Analyse - AFTER INDEX.png>)
+  	![](Screenshots/ExplainAnalyse_AFTER_INDEX.png)
 
 
 * Key Takeaways
