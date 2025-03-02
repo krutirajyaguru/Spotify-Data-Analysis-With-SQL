@@ -65,8 +65,8 @@ LIMIT 8;
 📌 Query Analysis Before Indexing
 
     Graphical: 
-    ![Graphical Execution Plan](Screenshots/graphical-before-index.png)
-
+    ![Graphical Execution Plan](Screenshots/Graphical - BEFORE INDEX.png)
+    
     Analysis:
     ![](<Screenshots/Analyse - BEFORE INDEX.png>)
 
