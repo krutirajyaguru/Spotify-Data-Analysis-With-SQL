@@ -65,7 +65,7 @@ LIMIT 8;
 📌 Query Analysis Before Indexing
 
     Graphical: 
-    ![Graphical Execution Plan]([Screenshots/Graphical - BEFORE INDEX.png](https://github.com/krutirajyaguru/Spotify-Data-Analysis-With-SQL/blob/main/Screenshots/Graphical%20-%20BEFORE%20INDEX.png))
+    ![Graphical Execution Plan]([https://github.com/krutirajyaguru/Spotify-Data-Analysis-With-SQL/blob/main/Screenshots/Graphical%20-%20BEFORE%20INDEX.png])
 
 
     
