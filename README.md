@@ -1,24 +1,24 @@
-Advanced SQL Project – Spotify Datasets
+# Advanced SQL Project – Spotify Datasets
 
-* Project Overview
+# Project Overview
 
-This project focuses on Advanced SQL queries and query optimization using PostgreSQL with Spotify Datasets. We will demonstrate database creation, table setup, data import, indexing, and query performance analysis using pgAdmin 4.
+	This project focuses on Advanced SQL queries and query optimization using PostgreSQL with Spotify Datasets. We will demonstrate 	database creation, table setup, data import, indexing, and query performance analysis using pgAdmin 4.
 
-* Setup Instructions:
+# Setup Instructions:
 
 1️. Register a New Server in pgAdmin4
 
-    -  Open pgAdmin4.
-    - Navigate to Servers → Right-click → Register Server.
-    -  Fill in the required fields:
-        - General → Provide a name for the server.
-        - Connection → Enter:
-            - Host Name
-            - Port
-            - Maintenance Database
-            - Username
-            - Password
-    - Click Save to register the server.
+	-  Open pgAdmin4.
+	- Navigate to Servers → Right-click → Register Server.
+	-  Fill in the required fields:
+	- General → Provide a name for the server.
+	- Connection → Enter:
+	    - Host Name
+	    - Port
+	    - Maintenance Database
+	    - Username
+	    - Password
+	- Click Save to register the server.
 
 2. Create a New Database
 
@@ -41,9 +41,9 @@ This project focuses on Advanced SQL queries and query optimization using Postgr
     - Count total rows: Right-click on the table → Count Rows.
 
 
-* Query Optimization
+# Query Optimization
 
-# Running an SQL Query
+* Running an SQL Query
 
 SELECT
  	artist,
@@ -56,7 +56,7 @@ WHERE artist = 'A Day To Remember'
 ORDER BY stream DESC
 LIMIT 8;
 
-# Analyze Query Performance
+* Analyze Query Performance
 
 - Select the query in pgAdmin and click on Explain.
 
@@ -123,7 +123,7 @@ Analysis:
   	![](Screenshots/ExplainAnalyse_AFTER_INDEX.png)
 
 
-* Key Takeaways
+# Key Takeaways
 
 - Query Optimization: Indexed queries execute significantly faster.
 - EXPLAIN ANALYZE: Provides in-depth insights into query performance.
