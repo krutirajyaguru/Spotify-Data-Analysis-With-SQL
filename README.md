@@ -68,6 +68,7 @@ LIMIT 8;
     ![Graphical Execution Plan](https://github.com/krutirajyaguru/Spotify-Data-Analysis-With-SQL/blob/main/Screenshots/Graphical%20-%20BEFORE%20INDEX.png)
 
 
+
     
     Analysis:
     ![](<Screenshots/Analyse - BEFORE INDEX.png>)
