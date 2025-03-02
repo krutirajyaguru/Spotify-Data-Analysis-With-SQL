@@ -2,23 +2,23 @@
 
 # Project Overview
 
-	This project focuses on Advanced SQL queries and query optimization using PostgreSQL with Spotify Datasets. We will demonstrate 	database creation, table setup, data import, indexing, and query performance analysis using pgAdmin 4.
+This project focuses on Advanced SQL queries and query optimization using PostgreSQL with Spotify Datasets. We will demonstrate 	database creation, table setup, data import, indexing, and query performance analysis using pgAdmin 4.
 
 # Setup Instructions:
 
-1️. Register a New Server in pgAdmin4
+1. Register a New Server in pgAdmin4
 
-	-  Open pgAdmin4.
-	- Navigate to Servers → Right-click → Register Server.
-	-  Fill in the required fields:
-	- General → Provide a name for the server.
-	- Connection → Enter:
-	    - Host Name
-	    - Port
-	    - Maintenance Database
-	    - Username
-	    - Password
-	- Click Save to register the server.
+    - Open pgAdmin4
+    - Navigate to Servers → Right-click → Register Server
+    - Fill in the required fields:
+    - General → Provide a name for the server.
+    - Connection → Enter:
+         - Host Name
+         - Port
+         - Maintenance Database
+         - Username
+         - Password
+    - Click Save to register the server.
 
 2. Create a New Database
 
@@ -36,7 +36,8 @@
         - Escape characters → "
         - Click OK to import data.
 
-4. View imported data 
+4. View imported data
+   
     - Right-click on the table → View/Edit Data → First 100 Rows.
     - Count total rows: Right-click on the table → Count Rows.
 
@@ -45,82 +46,82 @@
 
 * Running an SQL Query
 
-SELECT
- 	artist,
-	track,
-	views
-FROM spotify
-WHERE artist = 'A Day To Remember'
-	AND
-	most_played_on = 'Spotify'
-ORDER BY stream DESC
-LIMIT 8;
+	SELECT
+	 	artist,
+		track,
+		views
+	FROM spotify
+	WHERE artist = 'A Day To Remember'
+		AND
+		most_played_on = 'Spotify'
+	ORDER BY stream DESC
+	LIMIT 8;
 
 * Analyze Query Performance
 
-- Select the query in pgAdmin and click on Explain.
+	- Select the query in pgAdmin and click on Explain.
+	
+	- PostgreSQL provides a Graphical Execution Plan,Analysis and Statistics.
 
-- PostgreSQL provides a Graphical Execution Plan,Analysis and Statistics.
+	📌 Query Analysis Before Indexing
+	
+	Graphical: 
+	    	![Graphical Execution Plan](Screenshots/Graphical_AFTER_INDEX.png)
+	    
+	Analysis:
+	    	![](Screenshots/Analyse_BEFORE_INDEX.png)
+	
+	📌 Explain Analyze Output:
 
-📌 Query Analysis Before Indexing
+	    EXPLAIN ANALYZE -- Planning Time: 0.109 ms -- Execution Time: 8.630 ms
+	    SELECT
+	        artist,
+	        track,
+	        views
+	    FROM spotify
+	    WHERE artist = 'A Day To Remember'
+	        AND
+	        most_played_on = 'Spotify'
+	    ORDER BY stream DESC
+	    LIMIT 8;
+	
+	- Select this query and Execute it:
 
-Graphical: 
-    	![Graphical Execution Plan](Screenshots/Graphical_AFTER_INDEX.png)
-    
-Analysis:
-    	![](Screenshots/Analyse_BEFORE_INDEX.png)
-
-📌 Explain Analyze Output:
-
-    EXPLAIN ANALYZE -- Planning Time: 0.109 ms -- Execution Time: 8.630 ms
-    SELECT
-        artist,
-        track,
-        views
-    FROM spotify
-    WHERE artist = 'A Day To Remember'
-        AND
-        most_played_on = 'Spotify'
-    ORDER BY stream DESC
-    LIMIT 8;
-
-- Select this query and Execute it:
-
-	![](Screenshots/ExplainAnalyse_BEFORE_INDEX.png)
+		![](Screenshots/ExplainAnalyse_BEFORE_INDEX.png)
 
 
 * Creating an Index for Optimization
 
     - Create an Index on the artist column
 
-        CREATE INDEX artist_index ON spotify (artist);
+      		CREATE INDEX artist_index ON spotify (artist);
 
-📌 Query Analysis After Indexing
+	📌 Query Analysis After Indexing
+	
+	Graphical:   
+		![](Screenshots/Graphical_AFTER_INDEX.png)
+	
+	Analysis:
+	        ![](Screenshots/Analyse_AFTER_INDEX.png)
 
-Graphical:   
-	![](Screenshots/Graphical_AFTER_INDEX.png)
 
-Analysis:
-        ![](Screenshots/Analyse_AFTER_INDEX.png)
-
-
-📌 Explain Analyze Output:
-
-    EXPLAIN ANALYZE -- Planning Time: 0.183 ms -- Execution Time: 0.262 ms
-    SELECT
-        artist,
-        track,
-        views
-    FROM spotify
-    WHERE artist = 'A Day To Remember'
-        AND
-        most_played_on = 'Spotify'
-    ORDER BY stream DESC
-    LIMIT 8;
-
-- Select this query and Execute it:
-
-  	![](Screenshots/ExplainAnalyse_AFTER_INDEX.png)
+	📌 Explain Analyze Output:
+	
+	    EXPLAIN ANALYZE -- Planning Time: 0.183 ms -- Execution Time: 0.262 ms
+	    SELECT
+	        artist,
+	        track,
+	        views
+	    FROM spotify
+	    WHERE artist = 'A Day To Remember'
+	        AND
+	        most_played_on = 'Spotify'
+	    ORDER BY stream DESC
+	    LIMIT 8;
+	
+	- Select this query and Execute it:
+	
+	  	![](Screenshots/ExplainAnalyse_AFTER_INDEX.png)
 
 
 # Key Takeaways
