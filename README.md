@@ -1,2 +1,2 @@
-# Spotify-Data-Analysis-With-SQL-
+# Spotify-Data-Analysis-With-SQL
 SQL Practice
