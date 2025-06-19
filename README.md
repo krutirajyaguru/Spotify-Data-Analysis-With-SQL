@@ -130,7 +130,7 @@ This project focuses on Advanced SQL queries and query optimization using Postgr
 
 
 	📌 Explain Analyze Output:
-	
+	 
 	    EXPLAIN ANALYZE -- Planning Time: 0.183 ms -- Execution Time: 0.262 ms
 	    SELECT
 	        artist,
